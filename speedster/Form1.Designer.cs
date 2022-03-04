@@ -45,10 +45,10 @@ namespace speedster
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 74.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-20, 1);
+            this.label1.Font = new System.Drawing.Font("Lucida Console", 74.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-20, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(444, 113);
+            this.label1.Size = new System.Drawing.Size(462, 99);
             this.label1.TabIndex = 0;
             this.label1.Text = "000Km/h";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
@@ -60,11 +60,11 @@ namespace speedster
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 74.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Console", 74.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(-20, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(444, 113);
+            this.label2.Size = new System.Drawing.Size(462, 99);
             this.label2.TabIndex = 1;
             this.label2.Text = "000Km/h";
             this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
@@ -113,7 +113,7 @@ namespace speedster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 114);
+            this.ClientSize = new System.Drawing.Size(415, 100);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

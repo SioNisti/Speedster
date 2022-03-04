@@ -27,7 +27,6 @@ namespace speedster
         Mem m = new Mem();
         
         string speedAddress = "RallyTrophy.exe + 0x00163FDC, 284";
-        string igtAddress = "RallyTrophy.exe + 0x000AABDC, 4";
         double ts = 0.00d;
 
         public Form1()
@@ -49,13 +48,17 @@ namespace speedster
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            double a = m.ReadFloat(speedAddress, "", false);
-            string igt = m.ReadString(igtAddress);
+            int a = (int)m.ReadFloat(speedAddress, "", false);
 
-            if (igt == "00:00:00")
+            Console.WriteLine(a+"");
+
+            if (a < 0)
             {
-                ts = 0.00d;
-                label2.Text = "000Km/h";
+                label1.Text = a.ToString("00") + "Km/h";
+            }
+            else
+            {
+                label1.Text = a.ToString("000") + "Km/h";
             }
 
             if (a > ts)
@@ -91,14 +94,6 @@ namespace speedster
             {
                 label1.ForeColor = Color.Black;
             }
-
-            if (a <= -1)
-            {
-                label1.Text = a.ToString("00") + "Km/h";
-            } else
-            {
-                label1.Text = a.ToString("000") + "Km/h";
-            }
         }
 
         private void label1_MouseDown(object sender, MouseEventArgs e)
@@ -114,10 +109,10 @@ namespace speedster
         {
             if (showHighestSpeedToolStripMenuItem.Checked)
             {
-                this.Size = new Size(395, 216);
+                this.Size = new Size(415, 195);
             } else if (!showHighestSpeedToolStripMenuItem.Checked)
             {
-                this.Size = new Size(395, 108);
+                this.Size = new Size(415, 100);
             }
         }
 
