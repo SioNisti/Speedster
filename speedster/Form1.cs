@@ -25,18 +25,21 @@ namespace speedster
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         Mem m = new Mem();
-        
         string speedAddress = "RallyTrophy.exe + 0x00163FDC, 284";
         double ts = 0.00d;
 
         public Form1()
         {
             InitializeComponent();
+            this.TopMost = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         }
 
 
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            timer2.Interval = 10000;
+            timer2.Start();
             int PID = m.GetProcIdFromName("RallyTrophy");
             if (PID > 0)
             {
@@ -44,13 +47,17 @@ namespace speedster
                 timer1.Interval = 1;
                 timer1.Start();
             }
+
+            Console.WriteLine(PID + "");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int a = (int)m.ReadFloat(speedAddress, "", false);
+            Form1 f = new Form1();
+            f.TopMost = true;
+            f.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 
-            Console.WriteLine(a+"");
+            int a = (int)m.ReadFloat(speedAddress, "", false);
 
             if (a < 0)
             {
@@ -134,6 +141,19 @@ namespace speedster
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            int PID = m.GetProcIdFromName("RallyTrophy");
+            if (PID > 0)
+            {
+                m.OpenProcess(PID);
+                timer1.Interval = 1;
+                timer1.Start();
+            }
+
+            Console.WriteLine(PID + "");
         }
     }
 }
