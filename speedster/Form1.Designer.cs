@@ -35,14 +35,11 @@ namespace speedster
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.changeColorDependingOnSpeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showHighestSpeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetHighestSpeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeColorDependingOnSpeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.playerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.p1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.p2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,10 +76,16 @@ namespace speedster
             this.changeColorDependingOnSpeedToolStripMenuItem,
             this.showHighestSpeedToolStripMenuItem,
             this.resetHighestSpeedToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.playerToolStripMenuItem});
+            this.exitToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(257, 114);
+            // 
+            // changeColorDependingOnSpeedToolStripMenuItem
+            // 
+            this.changeColorDependingOnSpeedToolStripMenuItem.CheckOnClick = true;
+            this.changeColorDependingOnSpeedToolStripMenuItem.Name = "changeColorDependingOnSpeedToolStripMenuItem";
+            this.changeColorDependingOnSpeedToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.changeColorDependingOnSpeedToolStripMenuItem.Text = "Change color depending on speed";
             // 
             // showHighestSpeedToolStripMenuItem
             // 
@@ -100,13 +103,6 @@ namespace speedster
             this.resetHighestSpeedToolStripMenuItem.Text = "Reset highest speed";
             this.resetHighestSpeedToolStripMenuItem.Click += new System.EventHandler(this.resetHighestSpeedToolStripMenuItem_Click);
             // 
-            // changeColorDependingOnSpeedToolStripMenuItem
-            // 
-            this.changeColorDependingOnSpeedToolStripMenuItem.CheckOnClick = true;
-            this.changeColorDependingOnSpeedToolStripMenuItem.Name = "changeColorDependingOnSpeedToolStripMenuItem";
-            this.changeColorDependingOnSpeedToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
-            this.changeColorDependingOnSpeedToolStripMenuItem.Text = "Change color depending on speed";
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -117,27 +113,6 @@ namespace speedster
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // playerToolStripMenuItem
-            // 
-            this.playerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.p1ToolStripMenuItem,
-            this.p2ToolStripMenuItem});
-            this.playerToolStripMenuItem.Name = "playerToolStripMenuItem";
-            this.playerToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
-            this.playerToolStripMenuItem.Text = "Player";
-            // 
-            // p1ToolStripMenuItem
-            // 
-            this.p1ToolStripMenuItem.Name = "p1ToolStripMenuItem";
-            this.p1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.p1ToolStripMenuItem.Text = "p1";
-            // 
-            // p2ToolStripMenuItem
-            // 
-            this.p2ToolStripMenuItem.Name = "p2ToolStripMenuItem";
-            this.p2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.p2ToolStripMenuItem.Text = "p2";
             // 
             // Form1
             // 
@@ -172,9 +147,6 @@ namespace speedster
         private System.Windows.Forms.ToolStripMenuItem changeColorDependingOnSpeedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.ToolStripMenuItem playerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem p1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem p2ToolStripMenuItem;
     }
 }
 
